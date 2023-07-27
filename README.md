@@ -8,7 +8,7 @@
   - Examples of mutable reduction operations include: accumulating elements into a Collection; concatenating strings using a StringBuilder; computing summary information about elements such as sum, min, max, or average; computing "pivot table" summaries such as "maximum valued transaction by seller", etc. The class Collectors provides implementations of many common mutable reductions.
 - collect() Terminal Operation
   - We can collect the stream elements as List, Map, and Set with the collect() method.
-- Terminal Operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
+- terminal operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
   - anyMatch()
   - collect()
   - count()
@@ -18,10 +18,17 @@
   - max()
   - noneMatch()
   - allMatch()
+- functional interface
+  - A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. A functional interface can have any number of default methods. Runnable, ActionListener, and Comparable are some of the examples of functional interfaces. https://www.geeksforgeeks.org/functional-interfaces-java/
+- PREDICATE - functional interface; https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
+  - The Functional Interface PREDICATE is defined in the java.util.function package. It improves manageability of code, helps in unit-testing them separately, and contain some methods like:
+    - isEqual(Object targetRef)
+    - and(Predicate other)
+    - negate()
+    - or(Predicate other)
+    - test(T t)
 
 ## Based on:
-### Java Predicate:
-- https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
 
 ### Lambda:
 - https://www.javaguides.net/2020/03/java-lambda-expressions-examples.html
