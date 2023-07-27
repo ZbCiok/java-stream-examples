@@ -1,4 +1,4 @@
-# java-se-lambda-stream-examples
+# java-stream-examples
 
 ## Dictionary
 - reduction 
