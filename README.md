@@ -18,7 +18,6 @@
   - max()
   - noneMatch()
   - allMatch()
-  
 
 ## Based on:
 ### Java Predicate:
