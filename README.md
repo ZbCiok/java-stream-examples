@@ -1,4 +1,4 @@
-# java-stream-examples
+# java-streams-examples
 
 ## Dictionary
 - reduction 
