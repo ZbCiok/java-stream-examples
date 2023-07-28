@@ -1,6 +1,12 @@
 # java-stream-examples
 
 ## Dictionary
+- anonymous class
+  - Sometimes we can declare inner class without name such type of inner class are called anonymous class. Java anonymous class is a inner class with no name. https://javabydeveloper.com/java-anonymous-class-with-examples/
+    We may use java anonymous classe 3 ways:
+    - Anonymous inner class that extends a class.
+    - Anonymous inner class that implements an interface.
+    - Anonymous inner class that defined as arguments of method / constructor.
 - reduction 
   - Stream reduction is an operation that returns one value by combining the elements of a stream. The Java stream API contains a set of predefined reduction operations, such as average() , sum() , min() , max() , and count() .
 - mutable reduction operation
@@ -20,6 +26,10 @@
   - allMatch()
 - functional interface
   - A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. A functional interface can have any number of default methods. Runnable, ActionListener, and Comparable are some of the examples of functional interfaces. https://www.geeksforgeeks.org/functional-interfaces-java/
+    - Consumer
+    - Predicate
+    - Function
+    - Supplier
 - PREDICATE - functional interface; https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
   - The Functional Interface PREDICATE is defined in the java.util.function package. It improves manageability of code, helps in unit-testing them separately, and contain some methods like:
     - isEqual(Object targetRef)
