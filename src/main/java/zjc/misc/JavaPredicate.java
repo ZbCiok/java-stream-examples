@@ -16,7 +16,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-//TODO
 public class JavaPredicate {
     public void divisibleBy3() {
         // Creating a list of Integers
