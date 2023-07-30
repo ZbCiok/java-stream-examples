@@ -7,6 +7,9 @@
     - Anonymous inner class that extends a class.
     - Anonymous inner class that implements an interface.
     - Anonymous inner class that defined as arguments of method / constructor.
+- Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/    
+- optional
+  - Optional is a container type for a value which may be absent. https://www.callicoder.com/java-8-optional-tutorial/
 - reduction 
   - Stream reduction is an operation that returns one value by combining the elements of a stream. The Java stream API contains a set of predefined reduction operations, such as average() , sum() , min() , max() , and count() .
 - mutable reduction operation
@@ -30,7 +33,8 @@
     - Predicate
     - Function
     - Supplier
-- PREDICATE - functional interface; https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
+- PREDICATE - Predicate is a functional interface, which accepts an argument and returns a boolean. Usually, it used to apply in a filter for a collection of objects.
+    https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html, https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
   - The Functional Interface PREDICATE is defined in the java.util.function package. It improves manageability of code, helps in unit-testing them separately, and contain some methods like:
     - isEqual(Object targetRef)
     - and(Predicate other)
