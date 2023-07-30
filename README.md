@@ -34,7 +34,7 @@
     - Function
     - Supplier
 - PREDICATE - Predicate is a functional interface, which accepts an argument and returns a boolean. Usually, it used to apply in a filter for a collection of objects.
-    https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html, https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/
+    https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html, https://www.geeksforgeeks.org/java-8-predicate-with-examples/ , https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/ , https://mkyong.com/java8/java-8-predicate-examples/
   - The Functional Interface PREDICATE is defined in the java.util.function package. It improves manageability of code, helps in unit-testing them separately, and contain some methods like:
     - isEqual(Object targetRef)
     - and(Predicate other)

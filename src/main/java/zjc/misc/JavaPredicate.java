@@ -51,6 +51,70 @@ public class JavaPredicate {
 
         System.out.println(collect);
     }
+
+    // test
+    public void isEqualTestPredicate() {
+
+        System.out.println(Predicate.isEqual(11).test(12)); // false
+        System.out.println(Predicate.isEqual(11).test(11)); // true
+    }
+
+    // isEqual
+    public void isEqualPredicate() {
+
+        List<String> names = Arrays.asList(
+                "John",
+                "Peter",
+                "Alex",
+                "Richard",
+                "Mike"
+        );
+
+        String MATCH = "Alex";
+
+        // find a name that is equals "Alex"
+        names.stream()
+                .filter(Predicate.isEqual(MATCH))
+                .forEach(System.out::println);
+    }
+
+    public void andPredicate() {
+        Predicate<Integer> greaterThan5 = x -> x > 5;
+        Predicate<Integer> lessThan8 = x -> x < 8;
+
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        List<Integer> collect = list.stream()
+                .filter(greaterThan5.and(lessThan8))
+                .collect(Collectors.toList());
+
+        System.out.println(collect);
+    }
+
+    public void negatePredicate() {
+        Predicate<String> startWithA = x -> x.startsWith("A");
+
+        List<String> list = Arrays.asList("A", "AA", "AAA", "B", "BB", "BBB");
+
+        List<String> collect = list.stream()
+                .filter(startWithA.negate())
+                .collect(Collectors.toList());
+
+        System.out.println(collect);
+    }
+
+    public void orPredicate() {
+        Predicate<String> lengthIs3 = x -> x.length() == 3;
+        Predicate<String> startWithA = x -> x.startsWith("A");
+
+        List<String> list = Arrays.asList("A", "AA", "AAA", "B", "BB", "BBB");
+
+        List<String> collect = list.stream()
+                .filter(lengthIs3.or(startWithA))
+                .collect(Collectors.toList());
+
+        System.out.println(collect);
+    }
 }
 
 
