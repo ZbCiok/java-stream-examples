@@ -7,9 +7,14 @@
     - Anonymous inner class that extends a class.
     - Anonymous inner class that implements an interface.
     - Anonymous inner class that defined as arguments of method / constructor.
-- Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/    
-- optional
-  - Optional is a container type for a value which may be absent. https://www.callicoder.com/java-8-optional-tutorial/
+- Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/
+- flatMap
+  - https://www.baeldung.com/java-difference-map-and-flatmap
+- optional is a container type for a value which may be absent. It allows developers to represent the empty state. 
+  - https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html, 
+  - https://www.callicoder.com/java-8-optional-tutorial/, 
+  - https://www.baeldung.com/java-filter-stream-of-optional
+  - https://www.digitalocean.com/community/tutorials/java-8-stream#java.util.optional
 - reduction 
   - Stream reduction is an operation that returns one value by combining the elements of a stream. The Java stream API contains a set of predefined reduction operations, such as average() , sum() , min() , max() , and count() .
 - mutable reduction operation
