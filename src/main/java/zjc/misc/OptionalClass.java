@@ -1,6 +1,10 @@
 package zjc.misc;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /*
 *
@@ -54,6 +58,8 @@ import java.util.Optional;
 *   public boolean equals(Object ob )
 *
 */
+
+// java 9+
 public class OptionalClass {
 
     public void withoutOptionalExample01() {
@@ -87,5 +93,36 @@ public class OptionalClass {
 
         Optional<String> isNullAge = Optional.of(info[2]);
         System.out.println("info[2]: " + info[2]);
+    }
+
+    List<Optional<String>> listOfOptionals = Arrays.asList(
+            Optional.empty(), Optional.of("Hi"), Optional.empty(), Optional.of("there."));
+
+    // Filtering out empty Optionals with map
+    public void filterWithMap() {
+        List<String> filteredList = listOfOptionals.stream()
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.toList());
+
+        System.out.println("filteredList = " + filteredList);
+    }
+
+    // Filtering out empty Optionals with flatMap
+    public void filterWithFlatMap() {
+        List<String> filteredList = listOfOptionals.stream()
+                .flatMap(o -> o.isPresent() ? Stream.of(o.get()) : Stream.empty())
+                .collect(Collectors.toList());
+
+        System.out.println("filteredList = " + filteredList);
+    }
+
+    // Filtering out empty Optionals with Optional::stream
+    public void filterWithOptionalStream() {
+        List<String> filteredList = listOfOptionals.stream()
+                .flatMap(Optional::stream)
+                .collect(Collectors.toList());
+
+        System.out.println("filteredList = " + filteredList);
     }
 }

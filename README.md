@@ -9,7 +9,11 @@
     - Anonymous inner class that defined as arguments of method / constructor.
 - Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/
 - flatMap
+  - Stream flatMap(Function mapper) is an intermediate operation.
   - https://www.baeldung.com/java-difference-map-and-flatmap
+  - https://mkyong.com/java8/java-8-flatmap-example/
+- Stream map(Function mapper) is an intermediate operation.
+  - https://www.geeksforgeeks.org/stream-map-java-examples/
 - optional is a container type for a value which may be absent. It allows developers to represent the empty state. 
   - https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html, 
   - https://www.callicoder.com/java-8-optional-tutorial/, 
@@ -17,6 +21,10 @@
   - https://www.digitalocean.com/community/tutorials/java-8-stream#java.util.optional
 - reduction 
   - Stream reduction is an operation that returns one value by combining the elements of a stream. The Java stream API contains a set of predefined reduction operations, such as average() , sum() , min() , max() , and count() .
+- stream
+  - https://www.oracle.com/java/technologies/ma14-java-se-8-streams.html
+  - https://www.oracle.com/java/technologies/architect-streams-pt2.html
+  - https://stackify.com/streams-guide-java-8/
 - mutable reduction operation
   - A mutable reduction operation that accumulates input elements into a mutable result container, optionally transforming the accumulated result into a final representation after all input elements have been processed. Reduction operations can be performed either sequentially or in parallel.
   - Examples of mutable reduction operations include: accumulating elements into a Collection; concatenating strings using a StringBuilder; computing summary information about elements such as sum, min, max, or average; computing "pivot table" summaries such as "maximum valued transaction by seller", etc. The class Collectors provides implementations of many common mutable reductions.

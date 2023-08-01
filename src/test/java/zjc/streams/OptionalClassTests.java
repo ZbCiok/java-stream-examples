@@ -17,4 +17,19 @@ public class OptionalClassTests {
     public void withOptionalExample01() {
         optionalClass.withOptionalExample01();
     }
+
+    @Test
+    public void filterWithMap() {
+        optionalClass.filterWithMap();
+    }
+
+    @Test
+    public void filterWithFlatMap() {
+        optionalClass.filterWithFlatMap();
+    }
+
+    @Test
+    public void filterWithOptionalStream() {
+        optionalClass.filterWithOptionalStream();
+    }
 }
