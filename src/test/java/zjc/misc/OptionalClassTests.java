@@ -1,4 +1,4 @@
-package zjc.streams;
+package zjc.misc;
 
 import org.junit.jupiter.api.Test;
 import zjc.misc.OptionalClass;
