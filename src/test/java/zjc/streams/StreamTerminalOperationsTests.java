@@ -8,4 +8,9 @@ public class StreamTerminalOperationsTests {
     @Test public void streamAnyMatch() {
         streamTerminalOperations.streamAnyMatch();
     }
+
+    @Test
+    public void streamAllMatch() {
+        streamTerminalOperations.streamAnyMatch();
+    }
 }
