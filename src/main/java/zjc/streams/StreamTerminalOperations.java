@@ -1,12 +1,13 @@
 package zjc.streams;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
+import zjc.data.Item;
+import zjc.data.Person;
+
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.function.Predicate;
-import java.util.Map;
 
 /*
 * The terminal operations of the Java Stream interface typically return a single value.
@@ -35,6 +36,7 @@ import java.util.Map;
 *                   - The method Collectors.toMap(keyMapper, valueMapper) will throw IllegalStateException if there are duplicate keys as provided by keyMapper function.
 *                   - https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
 *    count()      -
+*    distinct     - method to find all instances of a class with unique id.
 *    findAny()    -
 *    findFirst()  -
 *    forEach()    -
@@ -100,5 +102,59 @@ public class StreamTerminalOperations {
                                  (s1, s2) -> s1 + "|" + s2,
                                   LinkedHashMap::new));
         System.out.println(m);
+    }
+
+    public void streamCount() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 7, 9, 22, 19, 18, 47, 3, 12, 29, 17, 44, 78, 99));
+        long count = numbers.stream().count();
+        System.out.println(count);
+    }
+
+    // Get distinct people by id
+    public void streamDistinct() {
+        Person doeOne = new Person(1, "John", "Doe");
+        Person doeTwo = new Person(1, "John", "Doe");
+        Person doeThree = new Person(1, "John", "Doe");
+        Person brianOne = new Person(2, "Brian", "Clooney");
+        Person brianTwo = new Person(2, "Brian", "Clooney");
+        Person alex = new Person(3, "Alex", "Kolen");
+
+        Collection<Person> list = Arrays.asList(
+                alex,
+                brianOne,
+                brianTwo,
+                doeOne,
+                doeTwo,
+                doeThree);
+
+        List<Person> distinctElements = list.stream()
+                .distinct()
+                .collect( Collectors.toList() );
+
+        System.out.println( distinctElements );
+    }
+
+
+    // Find duplicates by grouping
+    private <T> Set<T> groupingFindDuplicatesS(Stream<T> stream) {
+        // Group the elements along with their frequency in a map
+        return stream.collect(Collectors.groupingBy(
+                 Function.identity(), Collectors.counting()))
+                // Convert this map into a stream
+                .entrySet()
+                .stream()
+                // Check if frequency > 1 for duplicate elements
+                .filter(m -> m.getValue() > 1)
+                // Find such elements
+                .map(Map.Entry::getKey)
+                // And Collect them in a Set
+                .collect(Collectors.toSet());
+    }
+
+    public void streamDuplicates() {
+        // Initial stream
+        Stream<Integer> stream = Stream.of(5, 13, 4, 21, 13, 27, 2, 59, 59, 34);
+        // Print the found duplicate elements
+        System.out.println(groupingFindDuplicatesS(stream));
     }
 }

@@ -39,4 +39,21 @@ public class StreamTerminalOperationsTests {
     public void collectToMap04() {
         streamTerminalOperations.collectToMap04();
     }
+
+    @Test
+    public void streamCount() {
+        streamTerminalOperations.streamCount();
+    }
+
+    @Test
+    // Get distinct people by id
+    public void streamDistinct() {
+        streamTerminalOperations.streamDistinct();
+    }
+
+    // Find duplicates by grouping
+    @Test
+    public void streamDuplicates() {
+        streamTerminalOperations.streamDuplicates();
+    }
 }
