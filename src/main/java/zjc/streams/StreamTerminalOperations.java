@@ -37,9 +37,9 @@ import java.util.function.Predicate;
 *                   - https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
 *    count()      -
 *    distinct     - method to find all instances of a class with unique id.
-*    findAny()    -
-*    findFirst()  -
-*    forEach()    -
+*    findAny()    - returns the amy element from a Stream
+*    findFirst()  - returns the first element from a Stream
+*    forEach()    - forEach method is used to iterate or loop each element of Collection or Map or Stream.
 *    min()        -
 *    max()        -
 *    reduce()     -
@@ -156,5 +156,37 @@ public class StreamTerminalOperations {
         Stream<Integer> stream = Stream.of(5, 13, 4, 21, 13, 27, 2, 59, 59, 34);
         // Print the found duplicate elements
         System.out.println(groupingFindDuplicatesS(stream));
+    }
+
+    public void streamFindFirst() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 2, 1);
+        Optional<Integer> first = list
+                .stream()
+                .filter(x -> x > 1).findFirst();
+
+        if (first.isPresent()) {
+            System.out.println(first.get()); // 2
+        } else {
+            System.out.println("no value?");
+        }
+    }
+
+    public void streamFindAny() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 2, 1);
+        Optional<Integer> any = list.stream().filter(x -> x > 1).findAny();
+        if (any.isPresent()) {
+            Integer result = any.get();
+            System.out.println(result);
+        }
+    }
+
+    public void streamForEach() {
+        List<String> list = new ArrayList<>();
+        list.add("John");
+        list.add("Oliver");
+        list.add("Jack");
+        list.add("Henry");
+
+        list.stream().forEach(value -> System.out.println(value));
     }
 }

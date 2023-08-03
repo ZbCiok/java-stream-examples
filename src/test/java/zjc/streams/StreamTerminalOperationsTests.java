@@ -56,4 +56,20 @@ public class StreamTerminalOperationsTests {
     public void streamDuplicates() {
         streamTerminalOperations.streamDuplicates();
     }
+
+    @Test
+    public void streamFindFirst() {
+        streamTerminalOperations.streamFindFirst();
+    }
+
+    @Test
+    public void streamFindAny() {
+        streamTerminalOperations.streamFindAny();
+    }
+
+    @Test
+    public void streamForEach() {
+        streamTerminalOperations.streamForEach();
+    }
+
 }
