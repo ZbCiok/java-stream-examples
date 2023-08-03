@@ -13,4 +13,30 @@ public class StreamTerminalOperationsTests {
     public void streamAllMatch() {
         streamTerminalOperations.streamAnyMatch();
     }
+
+    @Test
+    public void streamNoneMatch() {
+        streamTerminalOperations.streamNoneMatch();
+    }
+
+    @Test
+    public void collectToMap01() {
+        streamTerminalOperations.collectToMap01();
+    }
+
+    // IllegalStateException - duplicate keys
+    @Test
+    public void collectToMap02() {
+        streamTerminalOperations.collectToMap02();
+    }
+
+    @Test
+    public void collectToMap03() {
+        streamTerminalOperations.collectToMap03();
+    }
+
+    @Test
+    public void collectToMap04() {
+        streamTerminalOperations.collectToMap04();
+    }
 }
