@@ -72,4 +72,23 @@ public class StreamTerminalOperationsTests {
         streamTerminalOperations.streamForEach();
     }
 
+    @Test
+    public void streamMin() {
+        streamTerminalOperations.streamMin();
+    }
+
+    @Test
+    public void streamMax() {
+        streamTerminalOperations.streamMax();
+    }
+
+    @Test
+    public void streamSum() {
+        streamTerminalOperations.streamSum();
+    }
+
+    @Test
+    public void streamAverage() {
+        streamTerminalOperations.streamAverage();
+    }
 }

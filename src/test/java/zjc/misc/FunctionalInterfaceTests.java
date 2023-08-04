@@ -24,4 +24,14 @@ public class FunctionalInterfaceTests {
     public void predicateInterface() {
         functionalInterface.predicateInterface();
     }
+
+    @Test
+    public void biFunction01() {
+        functionalInterface.biFunction01();
+    }
+
+    @Test
+    public void biOperator01() {
+        functionalInterface.biOperator01();
+    }
 }

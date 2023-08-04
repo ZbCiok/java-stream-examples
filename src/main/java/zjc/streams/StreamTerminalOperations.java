@@ -6,6 +6,7 @@ import zjc.data.Person;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.function.Predicate;
 
@@ -40,10 +41,13 @@ import java.util.function.Predicate;
 *    findAny()    - returns the amy element from a Stream
 *    findFirst()  - returns the first element from a Stream
 *    forEach()    - forEach method is used to iterate or loop each element of Collection or Map or Stream.
-*    min()        -
-*    max()        -
-*    reduce()     -
-*    toArray()    -
+*    min()        - Optional<T> min(Comparator<? super T> comparator);
+*    max()        - Optional<T> max(Comparator<? super T> comparator);
+*    reduce()     - Syntax: T reduce(T identity, BinaryOperator<T> accumulator);
+*                   identity – an element that is the initial value of the reduction operation and the default result if the stream is empty
+*                   accumulator – It’s a BinaryOperator. It represents a function that takes two parameters, the first is the result of a previous reduction operation, and the second is the next element in the stream.
+*                   https://www.appsdeveloperblog.com/java-stream-reduce-operation/
+*    average()    - Syntax: OptionalDouble average()
 */
 public class StreamTerminalOperations {
     public void streamAnyMatch() {
@@ -188,5 +192,47 @@ public class StreamTerminalOperations {
         list.add("Henry");
 
         list.stream().forEach(value -> System.out.println(value));
+    }
+
+    public void streamMin() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(14, 98, 72, 8, 3, 1, 10, 14, 42, 97, 24));
+
+        int minNumber = numbers.stream()
+                .min(Comparator.comparing(Integer::valueOf))
+                .get();
+
+        System.out.println(minNumber);
+    }
+
+    public void streamMax() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(14, 98, 72, 8, 3, 1, 10, 14, 42, 97, 24));
+        int maxNumber = numbers.stream()
+                .max(Comparator.comparing(Integer::valueOf))
+                .get();
+        System.out.println(maxNumber);
+    }
+
+    public void streamReduce() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(3, 5, 7, 9));
+        int result = numbers.stream().reduce(1, (num1, num2) -> num1 * num2);
+        System.out.println(result);
+    }
+
+    public void streamSum() {
+        List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
+        Integer sum = integers.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+        System.out.println(sum);
+    }
+
+    public void streamAverage() {
+        IntStream stream = IntStream.of(1,2, 3, 4, 5, 6, 7, 8);
+        OptionalDouble obj = stream.average();
+        if (obj.isPresent()) {
+            System.out.println(obj.getAsDouble());
+        } else {
+            System.out.println("-1");
+        }
     }
 }
