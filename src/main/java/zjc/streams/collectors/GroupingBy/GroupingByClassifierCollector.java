@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 
-public class GroupingByClassifierDownstream {
+public class GroupingByClassifierCollector {
     List<Employee> employees = List.of(
             new Employee(1, "Alex", 30, new Department(1, "HR")),
             new Employee(2, "Alex", 36, new Department(1, "HR")),

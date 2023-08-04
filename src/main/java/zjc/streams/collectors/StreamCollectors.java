@@ -13,15 +13,18 @@ package zjc.streams.collectors;
  * x averagingLong(ToLongFunction<? super T> mapper)
  * x collectingAndThen(Collector<T,A,R> downstream, Function<R,RR> finisher)
  * x counting()
- * groupingBy(Function<? super T,? extends K> classifier)
- * groupingBy(Function<? super T,? extends K> classifier, Collector<? super T,A,D> downstream)
- * groupingBy(Function<? super T,? extends K> classifier, Supplier<M> mapFactory, Collector<? super T,A,D> downstream)
+ * x groupingBy(Function<? super T,? extends K> classifier)
+ * x groupingBy(Function<? super T,? extends K> classifier, Collector<? super T,A,D> downstream)
+ * x groupingBy(Function<? super T,? extends K> classifier, Supplier<M> mapFactory, Collector<? super T,A,D> downstream)
  * groupingByConcurrent(Function<? super T,? extends K> classifier)
  * groupingByConcurrent(Function<? super T,? extends K> classifier, Collector<? super T,A,D> downstream)
  * groupingByConcurrent(Function<? super T,? extends K> classifier, Supplier<M> mapFactory, Collector<? super T,A,D> downstream)
- * joining()
+ *
+ * - https://www.educative.io/answers/what-is-the-collectorsjoining-method-in-java
+ * joining() is a static method of Collectors that returns a Collector that concatenates the input elements with the specified delimiter. There are three variations of the joining() method:
  * joining(CharSequence delimiter)
  * joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)
+ *
  * mapping(Function<? super T,? extends U> mapper, Collector<? super U,A,R> downstream)
  * maxBy(Comparator<? super T> comparator)
  * minBy(Comparator<? super T> comparator)
