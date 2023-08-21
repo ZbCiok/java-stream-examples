@@ -25,10 +25,11 @@ package zjc.streams.collectors;
  * x joining(CharSequence delimiter)
  * x joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)
  *
- * public static <T, U, A, R> Collector<T, ?, R> mapping(Function<? super T, ? extends U> mapper, Collector<? super U, A, R> downstream)
+ * x public static <T, U, A, R> Collector<T, ?, R> mapping(Function<? super T, ? extends U> mapper, Collector<? super U, A, R> downstream)
  *  is a static method of the Collectors class that returns a Collector. It converts a Collector accepting elements of one type to a Collector that accepts elements of another type.
  *  https://www.educative.io/answers/what-is-collectorsmapping-in-java
- * maxBy(Comparator<? super T> comparator)
+ * maxBy(Comparator<? super T> comparator) is a static method of the Collectors class that is used to find the maximum element of the input elements using the passed comparator.
+ *  https://www.educative.io/answers/what-is-collectorsmaxby-in-java
  * minBy(Comparator<? super T> comparator)
  * partitioningBy(Predicate<? super T> predicate)
  * partitioningBy(Predicate<? super T> predicate, Collector<? super T,A,D> downstream)
@@ -171,9 +172,12 @@ public class StreamCollectors {
         System.out.println("Mapping result - " + result);
     }
 
-    //TODO
     public void maxBy() {
-
+        List<String> stringList = Arrays.asList("zjc", "streams", "collectors");
+        System.out.println("Stream before modification - " + stringList);
+        Stream<String> stringStream = stringList.stream();
+        Optional<String> maxElement = stringStream.collect(Collectors.maxBy(Comparator.naturalOrder()));
+        System.out.println("Maximum element of the stream - " + (maxElement.orElse("null")));
     }
 
     //TODO

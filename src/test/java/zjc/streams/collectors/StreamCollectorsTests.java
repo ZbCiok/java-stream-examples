@@ -45,4 +45,9 @@ public class StreamCollectorsTests {
     public void mapping() {
         streamCollectors.mapping();
     }
+
+    @Test
+    public void maxBy() {
+        streamCollectors.maxBy();
+    }
 }
