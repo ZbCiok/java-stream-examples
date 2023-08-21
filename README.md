@@ -18,6 +18,8 @@
    - https://www.educative.io/answers/what-is-collectorsmapping-in-java
 - maxBy()  is a static method of the Collectors class that is used to find the maximum element of the input elements using the passed comparator.
    - https://www.educative.io/answers/what-is-collectorsmaxby-in-java
+- minBy() is a static method of the Collectors class that finds the minimum element of the input elements. It uses the passed comparator to do so.
+   - https://www.educative.io/answers/what-is-collectorsminby-in-java
 - optional is a container type for a value which may be absent. It allows developers to represent the empty state. 
   - https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html, 
   - https://www.callicoder.com/java-8-optional-tutorial/, 

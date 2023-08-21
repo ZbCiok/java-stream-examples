@@ -50,4 +50,9 @@ public class StreamCollectorsTests {
     public void maxBy() {
         streamCollectors.maxBy();
     }
+
+    @Test
+    public void minBy() {
+        streamCollectors.minBy();
+    }
 }
