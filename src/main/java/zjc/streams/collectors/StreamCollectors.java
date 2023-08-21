@@ -31,17 +31,22 @@ package zjc.streams.collectors;
  * x maxBy(Comparator<? super T> comparator) is a static method of the Collectors class that is used to find the maximum element of the input elements using the passed comparator.
  *  https://www.educative.io/answers/what-is-collectorsmaxby-in-java
  * x minBy(Comparator<? super T> comparator)
+ *
+ * https://stackabuse.com/java-8-streams-definitive-guide-to-partitioningby/
  * partitioningBy(Predicate<? super T> predicate)
  * partitioningBy(Predicate<? super T> predicate, Collector<? super T,A,D> downstream)
+ *
  * reducing(BinaryOperator<T> op)
  * reducing(T identity, BinaryOperator<T> op)
  * reducing(U identity, Function<? super T,? extends U> mapper, BinaryOperator<U> op)
+ *
  * summarizingDouble(ToDoubleFunction<? super T> mapper)
  * summarizingInt(ToIntFunction<? super T> mapper)
  * summarizingLong(ToLongFunction<? super T> mapper)
  * summingDouble(ToDoubleFunction<? super T> mapper)
  * summingInt(ToIntFunction<? super T> mapper)
  * summingLong(ToLongFunction<? super T> mapper)
+ *
  * toCollection(Supplier<C> collectionFactory)
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
