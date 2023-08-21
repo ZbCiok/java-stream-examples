@@ -40,4 +40,9 @@ public class StreamCollectorsTests {
     public void CollectToList() {
         streamCollectors.collectToList();
     }
+
+    @Test
+    public void mapping() {
+        streamCollectors.mapping();
+    }
 }

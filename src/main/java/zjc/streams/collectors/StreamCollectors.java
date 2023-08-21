@@ -21,11 +21,13 @@ package zjc.streams.collectors;
  * groupingByConcurrent(Function<? super T,? extends K> classifier, Supplier<M> mapFactory, Collector<? super T,A,D> downstream)
  *
  * - https://www.educative.io/answers/what-is-the-collectorsjoining-method-in-java
- * joining() is a static method of Collectors that returns a Collector that concatenates the input elements with the specified delimiter. There are three variations of the joining() method:
- * joining(CharSequence delimiter)
- * joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)
+ * x joining() is a static method of Collectors that returns a Collector that concatenates the input elements with the specified delimiter. There are three variations of the joining() method:
+ * x joining(CharSequence delimiter)
+ * x joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)
  *
- * mapping(Function<? super T,? extends U> mapper, Collector<? super U,A,R> downstream)
+ * public static <T, U, A, R> Collector<T, ?, R> mapping(Function<? super T, ? extends U> mapper, Collector<? super U, A, R> downstream)
+ *  is a static method of the Collectors class that returns a Collector. It converts a Collector accepting elements of one type to a Collector that accepts elements of another type.
+ *  https://www.educative.io/answers/what-is-collectorsmapping-in-java
  * maxBy(Comparator<? super T> comparator)
  * minBy(Comparator<? super T> comparator)
  * partitioningBy(Predicate<? super T> predicate)
@@ -49,6 +51,8 @@ package zjc.streams.collectors;
  * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
  * toSet()
  */
+
+import zjc.data.StaticPerson;
 
 import java.util.*;
 import java.util.function.Function;
@@ -154,9 +158,17 @@ public class StreamCollectors {
         System.out.print(evenNumbersList);
     }
 
-    //TODO
-    public void joining() {
-
+    public void mapping() {
+        List<StaticPerson.Person> personList = Arrays.asList(new StaticPerson.Person("bob", 34),
+                                                             new StaticPerson.Person("bob", 43),
+                                                             new StaticPerson.Person("mary", 84),
+                                                             new StaticPerson.Person("john", 12),
+                                                             new StaticPerson.Person("bob", 22));
+        System.out.println("Person list - " + personList);
+        Stream<StaticPerson.Person> personStream = personList.stream();
+        Map<String, List<Integer>> result = personStream.collect(Collectors.groupingBy(p -> p.name,
+                Collectors.mapping(e -> e.age, Collectors.toList())));
+        System.out.println("Mapping result - " + result);
     }
 
     //TODO

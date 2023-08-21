@@ -14,6 +14,8 @@
   - https://mkyong.com/java8/java-8-flatmap-example/
 - Stream map(Function mapper) is an intermediate operation.
   - https://www.geeksforgeeks.org/stream-map-java-examples/
+- mapping() is a static method of the Collectors class that returns a Collector. It converts a Collector accepting elements of one type to a Collector that accepts elements of another type.
+   - https://www.educative.io/answers/what-is-collectorsmapping-in-java
 - optional is a container type for a value which may be absent. It allows developers to represent the empty state. 
   - https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html, 
   - https://www.callicoder.com/java-8-optional-tutorial/, 
