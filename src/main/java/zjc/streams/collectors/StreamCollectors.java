@@ -47,9 +47,11 @@ package zjc.streams.collectors;
  * identity: The identity value for the reduction, i.e. for all input elements x: op(identity,x) == x
  * mapper: a mapping function for input type T to U conversion.
  *
- * summarizingDouble(ToDoubleFunction<? super T> mapper)
- * summarizingInt(ToIntFunction<? super T> mapper)
- * summarizingLong(ToLongFunction<? super T> mapper)
+ * https://www.educative.io/answers/what-is-collectorssummarizingdouble-in-java
+ * x summarizingDouble(ToDoubleFunction<? super T> mapper)
+ * x summarizingInt(ToIntFunction<? super T> mapper)
+ * x summarizingLong(ToLongFunction<? super T> mapper)
+ *
  * summingDouble(ToDoubleFunction<? super T> mapper)
  * summingInt(ToIntFunction<? super T> mapper)
  * summingLong(ToLongFunction<? super T> mapper)
