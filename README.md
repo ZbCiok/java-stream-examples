@@ -35,6 +35,9 @@
 - summarizingDouble()
 - summarizingInt()
 - summarizingLong()
+- summingDouble()
+- summingLong()
+- summingInt()
 - mutable reduction operation
   - A mutable reduction operation that accumulates input elements into a mutable result container, optionally transforming the accumulated result into a final representation after all input elements have been processed. Reduction operations can be performed either sequentially or in parallel.
   - Examples of mutable reduction operations include: accumulating elements into a Collection; concatenating strings using a StringBuilder; computing summary information about elements such as sum, min, max, or average; computing "pivot table" summaries such as "maximum valued transaction by seller", etc. The class Collectors provides implementations of many common mutable reductions.

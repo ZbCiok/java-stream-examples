@@ -52,9 +52,10 @@ package zjc.streams.collectors;
  * x summarizingInt(ToIntFunction<? super T> mapper)
  * x summarizingLong(ToLongFunction<? super T> mapper)
  *
- * summingDouble(ToDoubleFunction<? super T> mapper)
- * summingInt(ToIntFunction<? super T> mapper)
- * summingLong(ToLongFunction<? super T> mapper)
+ * https://stackabuse.com/guide-to-java-8-collectors-summingdouble-summinglong-and-summingint/
+ * x summingDouble(ToDoubleFunction<? super T> mapper)
+ * x summingInt(ToIntFunction<? super T> mapper)
+ * x summingLong(ToLongFunction<? super T> mapper)
  *
  * toCollection(Supplier<C> collectionFactory)
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
