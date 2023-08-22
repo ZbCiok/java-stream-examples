@@ -1,0 +1,37 @@
+package zjc.streams.collectors.reducing;
+
+import zjc.data.Student;
+
+import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Reducing {
+    public void reducingOp01() {
+        Stream<Integer> s = Stream.of(5, 10, 20, 50);
+        Integer i = s.collect(Collectors.reducing((integer, integer2)
+                        -> integer2 - integer)).orElse(-1);
+
+        System.out.println(i);
+    }
+
+    public void reducingOp02() {
+        List<Student> students = Arrays.asList(
+                new Student("John Smith", "Miami", 7.38, 19),
+                new Student("Mike Miles", "New York", 8.4, 21),
+                new Student("Michael Peterson", "New York", 7.5, 20),
+                new Student("James Robertson", "Miami", 9.1, 20),
+                new Student("Joe Murray", "New York", 7.9, 19),
+                new Student("Kyle Miller", "Miami", 9.83, 20)
+        );
+
+        Map<String, Optional<Student>> reduceByCityAvgGrade = students.stream()
+                .collect(Collectors
+                        .groupingBy(Student::getCity,
+                                Collectors.reducing(BinaryOperator
+                                        .maxBy(Comparator
+                                                .comparing(Student::getAvgGrade)))));
+        System.out.println(reduceByCityAvgGrade);
+    }
+}

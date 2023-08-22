@@ -33,12 +33,18 @@ package zjc.streams.collectors;
  * x minBy(Comparator<? super T> comparator)
  *
  * https://stackabuse.com/java-8-streams-definitive-guide-to-partitioningby/
- * partitioningBy(Predicate<? super T> predicate)
- * partitioningBy(Predicate<? super T> predicate, Collector<? super T,A,D> downstream)
+ * x partitioningBy(Predicate<? super T> predicate)
+ * x partitioningBy(Predicate<? super T> predicate, Collector<? super T,A,D> downstream)
  *
- * reducing(BinaryOperator<T> op)
- * reducing(T identity, BinaryOperator<T> op)
- * reducing(U identity, Function<? super T,? extends U> mapper, BinaryOperator<U> op)
+ * https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-reducing.html
+ * https://stackabuse.com/guide-to-java-8-collectors-reducing/
+ * x <T> Collector<T,?,Optional<T>> reducing(BinaryOperator<T> op)
+ * <T> Collector<T,?,T> reducing(T identity, BinaryOperator<T> op)
+ * <T,U> Collector<T,?,U> reducing(U identity, Function<? super T,? extends U> mapper, BinaryOperator<U> op)
+ * Parameters:
+ * op: a BinaryOperator which reduces the input values
+ * identity: The identity value for the reduction, i.e. for all input elements x: op(identity,x) == x
+ * mapper: a mapping function for input type T to U conversion.
  *
  * summarizingDouble(ToDoubleFunction<? super T> mapper)
  * summarizingInt(ToIntFunction<? super T> mapper)

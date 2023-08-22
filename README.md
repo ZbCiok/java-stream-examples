@@ -25,6 +25,7 @@
   - https://www.callicoder.com/java-8-optional-tutorial/, 
   - https://www.baeldung.com/java-filter-stream-of-optional
   - https://www.digitalocean.com/community/tutorials/java-8-stream#java.util.optional
+- reducing Collectors#reducing() return a Collector which perform a reduction on the input stream elements according to the provided BinaryOperator / BinaryOperator using the provided identity / specified mapping function and BinaryOperator
 - reduction 
   - Stream reduction is an operation that returns one value by combining the elements of a stream. The Java stream API contains a set of predefined reduction operations, such as average() , sum() , min() , max() , and count() .
 - stream
