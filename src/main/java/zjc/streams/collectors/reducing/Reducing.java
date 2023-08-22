@@ -54,4 +54,20 @@ public class Reducing {
                                                 .comparing(Student::getAvgGrade)))));
         System.out.println(reduceByCityAvgGrade);
     }
+
+    public void reducingOpIdFun01() {
+        Stream<Integer> s = Stream.of(5, 10, 20, 50).parallel();
+        String str = s.collect(Collectors.reducing(
+                "",
+                x -> Integer.toString(x),
+                (s1, s2) -> s1 + s2));
+        System.out.println(str);
+    }
+
+    public void reducingOpIdFun02() {
+        double largestAverageGrade = students.stream()
+                .collect(Collectors.reducing(0.0, Student::getAvgGrade,
+                        BinaryOperator.maxBy(Comparator.comparingDouble(value -> value))));
+        System.out.println(largestAverageGrade);
+    }
 }

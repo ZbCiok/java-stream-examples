@@ -25,4 +25,14 @@ public class ReducingTests {
     public void reducingOpId02() {
         reducing.reducingOpId02();
     }
+
+    @Test
+    public void reducingOpIdFun01() {
+        reducing.reducingOpIdFun01();
+    }
+
+    @Test
+    public void reducingOpIdFun02() {
+        reducing.reducingOpIdFun02();
+    }
 }
