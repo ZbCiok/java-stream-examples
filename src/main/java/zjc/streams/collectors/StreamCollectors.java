@@ -38,9 +38,10 @@ package zjc.streams.collectors;
  *
  * https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-reducing.html
  * https://stackabuse.com/guide-to-java-8-collectors-reducing/
+ * map() and reduce() is preferred if you're not really doing anything else. reducing() is preferred as a downstream collector.
  * x <T> Collector<T,?,Optional<T>> reducing(BinaryOperator<T> op)
- * <T> Collector<T,?,T> reducing(T identity, BinaryOperator<T> op)
- * <T,U> Collector<T,?,U> reducing(U identity, Function<? super T,? extends U> mapper, BinaryOperator<U> op)
+ * x <T> Collector<T,?,T> reducing(T identity, BinaryOperator<T> op)
+ * x <T,U> Collector<T,?,U> reducing(U identity, Function<? super T,? extends U> mapper, BinaryOperator<U> op)
  * Parameters:
  * op: a BinaryOperator which reduces the input values
  * identity: The identity value for the reduction, i.e. for all input elements x: op(identity,x) == x
