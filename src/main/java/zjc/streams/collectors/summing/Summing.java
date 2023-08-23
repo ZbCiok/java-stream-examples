@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 public class Summing {
 
     public void summingDouble() {
@@ -23,4 +25,5 @@ public class Summing {
         Long sum = numbers.stream().collect(Collectors.summingLong(Long::longValue));
         System.out.println(sum);
     }
+
 }

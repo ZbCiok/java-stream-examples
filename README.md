@@ -7,20 +7,22 @@
     - Anonymous inner class that extends a class.
     - Anonymous inner class that implements an interface.
     - Anonymous inner class that defined as arguments of method / constructor.
-- Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/
+- collect() - Terminal Operation
+  - We can collect the stream elements as List, Map, and Set with the collect() method.    
 - flatMap
   - Stream flatMap(Function mapper) is an intermediate operation.
   - https://www.baeldung.com/java-difference-map-and-flatmap
   - https://mkyong.com/java8/java-8-flatmap-example/
-- Stream map(Function mapper) is an intermediate operation.
-  - https://www.geeksforgeeks.org/stream-map-java-examples/
-- mapping() is a static method of the Collectors class that returns a Collector. It converts a Collector accepting elements of one type to a Collector that accepts elements of another type.
+- mapping() - is a static method of the Collectors class that returns a Collector. It converts a Collector accepting elements of one type to a Collector that accepts elements of another type.
    - https://www.educative.io/answers/what-is-collectorsmapping-in-java
-- maxBy()  is a static method of the Collectors class that is used to find the maximum element of the input elements using the passed comparator.
+- maxBy() - is a static method of the Collectors class that is used to find the maximum element of the input elements using the passed comparator.
    - https://www.educative.io/answers/what-is-collectorsmaxby-in-java
-- minBy() is a static method of the Collectors class that finds the minimum element of the input elements. It uses the passed comparator to do so.
+- minBy() - is a static method of the Collectors class that finds the minimum element of the input elements. It uses the passed comparator to do so.
    - https://www.educative.io/answers/what-is-collectorsminby-in-java
-- optional is a container type for a value which may be absent. It allows developers to represent the empty state. 
+- mutable reduction operation
+  - A mutable reduction operation that accumulates input elements into a mutable result container, optionally transforming the accumulated result into a final representation after all input elements have been processed. Reduction operations can be performed either sequentially or in parallel.
+  - Examples of mutable reduction operations include: accumulating elements into a Collection; concatenating strings using a StringBuilder; computing summary information about elements such as sum, min, max, or average; computing "pivot table" summaries such as "maximum valued transaction by seller", etc. The class Collectors provides implementations of many common mutable reductions.  
+- optional - is a container type for a value which may be absent. It allows developers to represent the empty state. 
   - https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html, 
   - https://www.callicoder.com/java-8-optional-tutorial/, 
   - https://www.baeldung.com/java-filter-stream-of-optional
@@ -32,17 +34,18 @@
   - https://www.oracle.com/java/technologies/ma14-java-se-8-streams.html
   - https://www.oracle.com/java/technologies/architect-streams-pt2.html
   - https://stackify.com/streams-guide-java-8/
+- Stream filter(Predicate predicate) - returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation. https://www.geeksforgeeks.org/stream-filter-java-examples/
+- Stream map(Function mapper) - is an intermediate operation.
+- https://www.geeksforgeeks.org/stream-map-java-examples/
 - summarizingDouble()
 - summarizingInt()
 - summarizingLong()
 - summingDouble()
 - summingLong()
 - summingInt()
-- mutable reduction operation
-  - A mutable reduction operation that accumulates input elements into a mutable result container, optionally transforming the accumulated result into a final representation after all input elements have been processed. Reduction operations can be performed either sequentially or in parallel.
-  - Examples of mutable reduction operations include: accumulating elements into a Collection; concatenating strings using a StringBuilder; computing summary information about elements such as sum, min, max, or average; computing "pivot table" summaries such as "maximum valued transaction by seller", etc. The class Collectors provides implementations of many common mutable reductions.
-- collect() Terminal Operation
-  - We can collect the stream elements as List, Map, and Set with the collect() method.
+- toCollection() - is used to collect/accumulate all the elements in a new collection in the encountered order.
+- 
+
 - terminal operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
   - anyMatch()
   - collect()

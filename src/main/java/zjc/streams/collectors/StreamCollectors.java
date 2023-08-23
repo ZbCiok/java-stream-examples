@@ -58,13 +58,17 @@ package zjc.streams.collectors;
  * x summingLong(ToLongFunction<? super T> mapper)
  *
  * toCollection(Supplier<C> collectionFactory)
+ *
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
  * toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
+ *
  * toList()
+ *
  * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
  * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
  * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
+ *
  * toSet()
  */
 

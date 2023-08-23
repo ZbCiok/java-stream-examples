@@ -20,4 +20,5 @@ public class SummingTests {
     public void summingLong() {
         summing.summingLong();
     }
+
 }
