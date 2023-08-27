@@ -82,9 +82,9 @@
   - Grouping by examples: 
     - https://salithachathuranga94.medium.com/java-8-streams-groupby-b15054d9e6c8 
     - https://www.davidvlijmincx.com/posts/java_stream_group_by/ 
-    - * https://howtodoinjava.com/java/stream/collectors-groupingby/
-    - *** https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-groupingby.html
-    - *** https://javadeveloperzone.com/java-basic/java-8-stream-group-count/
+    - https://howtodoinjava.com/java/stream/collectors-groupingby/
+    - https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-groupingby.html
+    - https://javadeveloperzone.com/java-basic/java-8-stream-group-count/
     - https://theboreddev.com/group-elements-in-java/
     - https://4comprehension.com/the-ultimate-guide-to-the-java-stream-api-groupingby-collector/
   - https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html
