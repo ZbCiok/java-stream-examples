@@ -44,8 +44,6 @@
 - summingLong()
 - summingInt()
 - toCollection() - is used to collect/accumulate all the elements in a new collection in the encountered order.
-- 
-
 - terminal operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
   - anyMatch()
   - collect()
