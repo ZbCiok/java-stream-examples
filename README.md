@@ -43,7 +43,9 @@
 - summingDouble()
 - summingLong()
 - summingInt()
-- toCollection() - is used to collect/accumulate all the elements in a new collection in the encountered order.
+- Collectors.toCollection() - is used to collect/accumulate all the elements in a new collection in the encountered order.
+- Collectors.toConcurrentMap - return a Collector which produces a new ConcurrentMap, populated with keys per provided keyMapper function and values per provided valueMap function.
+- Collectors.toList() - it is a terminal operation that collects the stream items into a mutable List.
 - terminal operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
   - anyMatch()
   - collect()
