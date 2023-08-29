@@ -1,8 +1,10 @@
 package zjc.streams;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /*
@@ -11,7 +13,8 @@ import java.util.stream.Stream;
 * Stream intermediate operations do not get executed until a terminal operation is invoked.
 * All Intermediate operations are lazy, so they’re not executed until a result of processing is actually needed.
 * Here is the list of all Stream intermediate operations:
-* filter() -   Returns a stream consisting of the elements of this stream that match the given predicate.
+* stream.concat - Creates a lazily concatenated stream whose elements are all the elements of the first stream followed by all the elements of the second stream.
+ * filter() -   Returns a stream consisting of the elements of this stream that match the given predicate.
 *
 * map() -      The Java Stream map() method converts (maps) an element to another object.
 *              For instance, if you had a list of strings it could convert each string to lowercase, uppercase,
@@ -37,6 +40,31 @@ import java.util.stream.Stream;
 * sorted() -   Returns a stream consisting of the elements of this stream, sorted according to the natural order.
 */
 public class StreamIntermediateOperations {
+
+    public void concatStringStreams() {
+        Stream<String> s1 = Stream.of("one", "two", "three");
+        Stream<String> s2 = Stream.of("four", "five", "six");
+
+        Stream<String> s3 = Stream.concat(s1, s2);
+        s3.forEach(System.out::println);
+    }
+
+    public void concatLongStreams() {
+        LongStream Stream1 = LongStream.of(1456, 1537);
+        LongStream Stream2 = LongStream.of(1891, 2087);
+
+        LongStream.concat(Stream1, Stream2).forEach(System.out::println);
+    }
+
+    public void concatCollectionsStreams() {
+        Collection<String> s1 = Arrays.asList("zjc", "stream");
+        Collection<String> s2 = Arrays.asList("collect", "collections");
+
+        Stream<String> combinedStream = Stream.of(s1, s2).flatMap(Collection::stream);
+        Collection<String> collectionCombined = combinedStream.toList();
+
+        collectionCombined.forEach(System.out::println);
+    }
 
     // Returns a stream consisting of the elements of this stream that
     // match the given predicate.

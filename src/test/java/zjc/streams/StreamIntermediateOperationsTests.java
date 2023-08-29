@@ -4,6 +4,22 @@ import org.junit.jupiter.api.Test;
 
 public class StreamIntermediateOperationsTests {
     StreamIntermediateOperations streamIntermediateOperations = new StreamIntermediateOperations();
+
+    @Test
+    public void concatStringStreams() {
+        streamIntermediateOperations.concatStringStreams();
+    }
+
+    @Test
+    public void concatLongStreams() {
+        streamIntermediateOperations.concatLongStreams();
+    }
+
+    @Test
+    public void concatCollectionsStreams() {
+        streamIntermediateOperations.concatCollectionsStreams();
+    }
+
     @Test
     public void streamFilter() {
         streamIntermediateOperations.streamFilter();

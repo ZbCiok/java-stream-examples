@@ -9,6 +9,7 @@
     - Anonymous inner class that defined as arguments of method / constructor.
 - collect() - Terminal Operation
   - We can collect the stream elements as List, Map, and Set with the collect() method.    
+- concat; Stream.concat - Creates a lazily concatenated stream whose elements are all the elements of the first stream followed by all the elements of the second stream.
 - flatMap
   - Stream flatMap(Function mapper) is an intermediate operation.
   - https://www.baeldung.com/java-difference-map-and-flatmap
