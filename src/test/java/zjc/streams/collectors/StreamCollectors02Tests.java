@@ -34,4 +34,9 @@ public class StreamCollectors02Tests {
     public void toList() {
         streamCollectors02.toList();
     }
+
+    @Test
+    public void toSet() {
+        streamCollectors02.toSet();
+    }
 }

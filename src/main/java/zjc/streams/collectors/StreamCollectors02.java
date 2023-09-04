@@ -17,20 +17,15 @@ package zjc.streams.collectors;
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
 *
-* toSet()
+* tx oSet()
 *
 */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Stream;
-import java.util.TreeSet;
 
 public class StreamCollectors02 {
 
@@ -75,5 +70,11 @@ public class StreamCollectors02 {
         Stream<String> language = Stream.of("zjc", "stream", "toList");
         List<String> result = language.collect(Collectors.toList());
         result.forEach(System.out::println);
+    }
+
+    public void toSet() {
+        Stream<String> s = Stream.of("Collectors", "for", "zjc", "Stream");
+        Set<String> mySet = s.collect(Collectors.toSet());
+        System.out.println(mySet);
     }
 }
