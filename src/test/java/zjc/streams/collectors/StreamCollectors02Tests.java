@@ -39,4 +39,9 @@ public class StreamCollectors02Tests {
     public void toSet() {
         streamCollectors02.toSet();
     }
+
+    @Test
+    public void toMapKeyValue() {
+        streamCollectors02.toMapKeyValue();
+    }
 }

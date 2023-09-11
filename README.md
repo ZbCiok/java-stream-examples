@@ -48,6 +48,7 @@
 - Collectors.toConcurrentMap - return a Collector which produces a new ConcurrentMap, populated with keys per provided keyMapper function and values per provided valueMap function.
 - Collectors.toList() - it is a terminal operation that collects the stream items into a mutable List.
 - Collectors.toSet() - returns a Collector that accumulates the input elements into a new Set.
+- Collectors.toMap - The static overloaded methods, Collectors.toMap() return a Collector which produces a new instance of Map, populated with keys per provided keyMapper function and values per provided valueMap function.
 - terminal operations https://github.com/swtestacademy/java-functional/tree/main/src/test/java/functional/stream/terminaloperations
   - anyMatch()
   - collect()

@@ -13,9 +13,16 @@ package zjc.streams.collectors;
 * x toList()
 *
 *
+* * https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
-* toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
+* * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
+* Parameters:
+* keyMapper: A mapping function to produce the map keys for each input stream element.
+* valueMapper: A mapping function to produce the map values for each input stream element.
+* mergeFunction: A binary operator which is to resolve collisions between values associated with the same key. The inputs to this function are the values which belong to the same key.
+* mapSupplier: A function which provides a new instance of the desired implementation of the Map.
+*
 *
 * tx oSet()
 *
@@ -76,5 +83,13 @@ public class StreamCollectors02 {
         Stream<String> s = Stream.of("Collectors", "for", "zjc", "Stream");
         Set<String> mySet = s.collect(Collectors.toSet());
         System.out.println(mySet);
+    }
+
+    public void toMapKeyValue() {
+        Stream<String> s = Stream.of("zjc", "stream", "toMap");
+        Map<Character, String> m = s.collect(
+                Collectors.toMap(s1 -> s1.charAt(0),
+                        s1 -> s1));
+        System.out.println(m);
     }
 }
