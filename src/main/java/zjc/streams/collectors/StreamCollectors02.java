@@ -15,7 +15,7 @@ package zjc.streams.collectors;
 *
 * * https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
-* * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
+* toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
 * Parameters:
 * keyMapper: A mapping function to produce the map keys for each input stream element.
@@ -24,7 +24,7 @@ package zjc.streams.collectors;
 * mapSupplier: A function which provides a new instance of the desired implementation of the Map.
 *
 *
-* tx oSet()
+* x toSet()
 *
 */
 
