@@ -13,7 +13,7 @@ package zjc.streams.collectors;
 * x toList()
 *
 *
-* * https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
+* https://www.logicbig.com/how-to/code-snippets/jcode-java-8-streams-collectors-tomap.html
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
 * toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
