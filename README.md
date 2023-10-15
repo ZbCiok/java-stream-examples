@@ -1,6 +1,6 @@
 # java-stream-examples
 
-## Dictionary
+## Dictionary - http://jreact.com/index.php/knowledge-base-2/
 - anonymous class
   - Sometimes we can declare inner class without name such type of inner class are called anonymous class. Java anonymous class is a inner class with no name. https://javabydeveloper.com/java-anonymous-class-with-examples/
     We may use java anonymous classe 3 ways:
