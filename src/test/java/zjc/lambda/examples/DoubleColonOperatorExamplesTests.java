@@ -6,21 +6,21 @@ public class DoubleColonOperatorExamplesTests {
 
     DoubleColonOperatorConstructorExamples doubleColonOperatorConstructorExamples = new DoubleColonOperatorConstructorExamples();
     @Test
-    public void GFG() {
-        doubleColonOperatorExamples.GFG();
+    public void doubleColon() {
+        doubleColonOperatorExamples.doubleColon();
     }
     @Test
-    public void StaticMethod() {
-        doubleColonOperatorExamples.StaticMethod();
-    }
-
-    @Test
-    public void InstanceFunction() {
-        doubleColonOperatorExamples.InstanceFunction();
+    public void doubleColonStaticMethod() {
+        doubleColonOperatorExamples.staticMethod();
     }
 
     @Test
-    public void instanceMethod() {
-        doubleColonOperatorConstructorExamples.new GFG().instanceMethod();
+    public void doubleColonInstanceFunction() {
+        doubleColonOperatorExamples.instanceFunction();
+    }
+
+    @Test
+    public void doubleColonInstanceMethod() {
+        new DoubleColonOperatorConstructorExamples.DoubleColonClass().instanceMethod();
     }
 }

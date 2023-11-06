@@ -3,41 +3,41 @@ package zjc.lambda.examples;
 import org.junit.jupiter.api.Test;
 
 public class LambdaExamplesTests {
-    LambdaExamples lambdaExamplesTests = new LambdaExamples();
-    LambdaComparatorExample lambdaComparatorExampleTest = new LambdaComparatorExample();
+    LambdaExamples lambdaExamples = new LambdaExamples();
+    LambdaComparatorExample lambdaComparatorExample = new LambdaComparatorExample();
 
     @Test
     public void ExampleSingleParameter() {
-        lambdaExamplesTests.ExampleSingleParameter();
+        lambdaExamples.ExampleSingleParameter();
     }
 
     @Test
     public void LambdaExpressionExample() {
-        lambdaExamplesTests.LambdaExpressionExample();
+        lambdaExamples.LambdaExpressionExample();
     }
 
     @Test
     public void JLEExampleNoParameter() {
-        lambdaExamplesTests.JLEExampleNoParameter();
+        lambdaExamples.lExampleNoParameter();
     }
 
     @Test
     public void JLEExampleMultipleParameters() {
-        lambdaExamplesTests.JLEExampleMultipleParameters();
+        lambdaExamples.lExampleMultipleParameters();
     }
 
     @Test
     public void JLEExampleMultipleStatements() {
-        lambdaExamplesTests.JLEExampleMultipleStatements();
+        lambdaExamples.lExampleMultipleStatements();
     }
 
     @Test
     public void JLEExampleRunnable() {
-        lambdaExamplesTests.JLEExampleRunnable();
+        lambdaExamples.lExampleRunnable();
     }
 
     @Test
     public void JLEComparatorExample() {
-        lambdaComparatorExampleTest.JLEComparatorExample();
+        lambdaComparatorExample.lComparatorExample();
     }
 }

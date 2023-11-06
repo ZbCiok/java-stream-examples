@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class LambdaComparatorExample {
-    public void JLEComparatorExample() {
+    public void lComparatorExample() {
 
         List<Person> listOfPerson = new ArrayList<Person>();
         listOfPerson.add(new Person("abc", 27));

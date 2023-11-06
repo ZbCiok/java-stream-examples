@@ -4,16 +4,15 @@ import java.util.*;
 import java.util.function.*;
 
 public class DoubleColonOperatorConstructorExamples {
-    class Test {
+    static class PrintString {
 
         // super function to be called
-        String print(String str)
-        {
+        String print(String str) {
             return ("Hello " + str + "\n");
         }
     }
 
-    public class GFG extends Test {
+    public static class DoubleColonClass extends PrintString {
 
         // instance method to override super method
         @Override
@@ -21,8 +20,7 @@ public class DoubleColonOperatorConstructorExamples {
 
             // call the super method
             // using double colon operator
-            Function<String, String>
-                    func = super::print;
+            Function<String, String> func = super::print;
 
             String newValue = func.apply(s);
             newValue += "Bye " + s + "\n";
@@ -34,18 +32,21 @@ public class DoubleColonOperatorConstructorExamples {
         public void instanceMethod() {
 
             List<String> list = new ArrayList<String>();
-            list.add("Geeks");
-            list.add("For");
-            list.add("GEEKS");
+
+            list.add("zjc");
+            list.add("Generalized");
+            list.add("java");
+            list.add("stream");
+            list.add("examples");
 
             // call the instance method
             // using double colon operator
-            list.forEach(new GFG()::print);
+            list.forEach(new DoubleColonClass()::print);
 
             System.out.println("------");
 
             // or
-            list.forEach((n) -> new GFG().print(n));
+            list.forEach((n) -> new DoubleColonClass().print(n));
         }
     }
 }

@@ -19,7 +19,7 @@ interface Addable {
     int add(int a, int b);
 }
 
-interface IAvarage {
+interface Avarage {
     double avg(int[] array);
 }
 
@@ -52,7 +52,7 @@ public class LambdaExamples {
         withLambda.draw();
     }
 
-    public void JLEExampleNoParameter() {
+    public void lExampleNoParameter() {
         // without lambda expression
         Sayable sayable = new Sayable() {
             @Override
@@ -70,7 +70,7 @@ public class LambdaExamples {
     }
 
 
-    public void JLEExampleMultipleParameters() {
+    public void lExampleMultipleParameters() {
         // without lambda expression
         Addable addable = new Addable() {
             @Override
@@ -91,9 +91,9 @@ public class LambdaExamples {
     }
 
     @Test
-    public void JLEExampleMultipleStatements() {
+    public void lExampleMultipleStatements() {
         // without lambda expression, IAvarage implementation using anonymous class
-        IAvarage avarage = new IAvarage() {
+        Avarage avarage = new Avarage() {
             @Override
             public double avg(int[] array) {
                 double sum = 0;
@@ -113,7 +113,7 @@ public class LambdaExamples {
 
         // with a lambda expression
         // You can pass multiple statements in lambda expression
-        IAvarage withLambda = (withLambdaArray) -> {
+        Avarage withLambda = (withLambdaArray) -> {
             double sum = 0;
             int arraySize = withLambdaArray.length;
 
@@ -131,7 +131,7 @@ public class LambdaExamples {
     }
 
     //java.lang.Runnable
-    public void JLEExampleRunnable() {
+    public void lExampleRunnable() {
         //without lambda, Runnable implementation using anonymous class
         Runnable runnable = new Runnable() {
             @Override
