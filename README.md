@@ -2,12 +2,6 @@
 
 ## Dictionary - http://jreact.com/index.php/knowledge-base-2/
 
-## Based on:
-
-### Lambda:
-- https://www.javaguides.net/2020/03/java-lambda-expressions-examples.html
-- https://www.geeksforgeeks.org/double-colon-operator-in-java/
-
 ### Streams:
 - https://howtodoinjava.com/java/stream/java-streams-by-examples/
 - Collectors:
